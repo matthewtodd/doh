@@ -1,0 +1,50 @@
+#!/usr/bin/env ruby
+
+# Ascii-art from http://www.schnoggo.com/figlet.html
+# Selecting, appropriately, the font named "doh.flf"
+DOH = <<-END
+DDDDDDDDDDDDD                         hhhhhhh                     
+D::::::::::::DDD                      h:::::h                     
+D:::::::::::::::DD                    h:::::h                     
+DDD:::::DDDDD:::::D                   h:::::h                     
+  D:::::D    D:::::D    ooooooooooo    h::::h hhhhh               
+  D:::::D     D:::::D oo:::::::::::oo  h::::hh:::::hhh            
+  D:::::D     D:::::Do:::::::::::::::o h::::::::::::::hh          
+  D:::::D     D:::::Do:::::ooooo:::::o h:::::::hhh::::::h         
+  D:::::D     D:::::Do::::o     o::::o h::::::h   h::::::h        
+  D:::::D     D:::::Do::::o     o::::o h:::::h     h:::::h        
+  D:::::D     D:::::Do::::o     o::::o h:::::h     h:::::h        
+  D:::::D    D:::::D o::::o     o::::o h:::::h     h:::::h        
+DDD:::::DDDDD:::::D  o:::::ooooo:::::o h:::::h     h:::::h        
+D:::::::::::::::DD   o:::::::::::::::o h:::::h     h:::::h ...... 
+D::::::::::::DDD      oo:::::::::::oo  h:::::h     h:::::h .::::. 
+DDDDDDDDDDDDD           ooooooooooo    hhhhhhh     hhhhhhh ......
+END
+
+def committing?
+  ARGV.include?('ci') or ARGV.include?('commit')
+end
+
+def unadded_files
+  `svn st`.grep /^\?/
+end
+
+def red(string)
+  "\e[31m#{string}\e[0m"
+end
+
+def exit_with_error
+  puts red(DOH)
+  puts unadded_files
+  exit
+end
+
+def proceed
+  exec 'svn', *ARGV
+end
+
+if committing? and unadded_files.any?
+  exit_with_error
+else
+  proceed
+end
