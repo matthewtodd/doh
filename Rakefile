@@ -1,4 +1,5 @@
 require 'rake/gempackagetask'
+require 'rake/contrib/sshpublisher'
 
 spec = Gem::Specification.new do |spec|
   spec.name        = 'doh'
