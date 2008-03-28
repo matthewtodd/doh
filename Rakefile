@@ -7,7 +7,6 @@ spec = Gem::Specification.new do |spec|
   spec.summary          = "Doh is a wrapper for svn that stops your commit with a warning if you've forgotten to add some files."
   spec.files            = FileList['README', 'TODO', 'bin/*', 'lib/**/*.rb'].to_a
   spec.executables      = ['doh']
-  spec.require_paths    = []
   spec.has_rdoc         = true
   spec.extra_rdoc_files = FileList['README', 'TODO'].to_a
   spec.author           = 'Matthew Todd'
