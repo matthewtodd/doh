@@ -3,4 +3,4 @@
 $:.unshift File.join(File.dirname(__FILE__), '..', 'lib')
 require 'doh'
 
-Doh.new(*ARGV).run
+Doh::Cli.new(ARGV).run

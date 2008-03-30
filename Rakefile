@@ -3,7 +3,7 @@ require 'rake/gemreleasetask'
 
 spec = Gem::Specification.new do |spec| 
   spec.name             = 'doh'
-  spec.version          = '0.1.0'
+  spec.version          = '0.2.0'
   spec.summary          = "Doh is a wrapper for svn that stops your commit with a warning if you've forgotten to add some files."
   spec.files            = FileList['README', 'TODO', 'bin/*', 'lib/**/*.rb'].to_a
   spec.executables      = ['doh']
