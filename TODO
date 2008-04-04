@@ -1,1 +1,2 @@
 * TODO SVK support
+* TODO Git: be smarter about committing_with_unadded_files? If there are no untracked files, just changes to files git knows or removed files, then git commit -a should succeed
