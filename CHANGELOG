@@ -1,0 +1,7 @@
+== 0.2.1
+
+* Git: don't warn about modifications to tracked files when given "commit -a"
+
+== 0.2.0
+
+* Initial release

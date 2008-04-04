@@ -4,10 +4,16 @@ class Doh::Scm::Git < Doh::Scm::Base
   end
 
   def unadded_files
-    untracked_files = false
+    pattern = if @args.include?('-a')
+      /(Untracked files:)/
+    else
+      /(Untracked files:)|(Changed but not updated:)/
+    end
+    
+    warn = false
     `git status`.grep(/^#/).select do |line|
-      untracked_files = true if line =~ /(Changed but not updated:)|(Untracked files:)/
-      untracked_files
+      warn = true if line =~ pattern
+      warn
     end
   end
 end
