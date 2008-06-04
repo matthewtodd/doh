@@ -1,3 +1,7 @@
+== 0.2.2
+
+* Documentation: Update for GitHub.
+
 == 0.2.1
 
 * Git: don't warn about modifications to tracked files when given "commit -a"
