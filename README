@@ -30,6 +30,6 @@ Doh stops your git or svn commit with a warning if you've forgotten to add some 
 
 == SOURCE
 
- git clone http://git.matthewtodd.org/doh.git
+ git clone git://github.com/matthewtodd/doh.git
  
-or {browse online}[http://git.matthewtodd.org/?p=doh.git;a=summary]
+or {browse online}[http://github.com/matthewtodd/doh]
