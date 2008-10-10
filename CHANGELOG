@@ -1,3 +1,11 @@
+== 0.2.4
+
+* Fix rdoc for GitHub.
+
+== 0.2.3
+
+* Publish gem on GitHub.
+
 == 0.2.2
 
 * Documentation: Update for GitHub.
