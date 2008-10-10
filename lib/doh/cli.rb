@@ -28,21 +28,21 @@ class Doh::Cli
   # Ascii-art from http://www.schnoggo.com/figlet.html
   # Selecting, appropriately, the font named "doh.flf"
   DOH = <<-END.gsub(/^    /, '') #:nodoc:
-    DDDDDDDDDDDDD                         hhhhhhh                     
-    D::::::::::::DDD                      h:::::h                     
-    D:::::::::::::::DD                    h:::::h                     
-    DDD:::::DDDDD:::::D                   h:::::h                     
-      D:::::D    D:::::D    ooooooooooo    h::::h hhhhh               
-      D:::::D     D:::::D oo:::::::::::oo  h::::hh:::::hhh            
-      D:::::D     D:::::Do:::::::::::::::o h::::::::::::::hh          
-      D:::::D     D:::::Do:::::ooooo:::::o h:::::::hhh::::::h         
-      D:::::D     D:::::Do::::o     o::::o h::::::h   h::::::h        
-      D:::::D     D:::::Do::::o     o::::o h:::::h     h:::::h        
-      D:::::D     D:::::Do::::o     o::::o h:::::h     h:::::h        
-      D:::::D    D:::::D o::::o     o::::o h:::::h     h:::::h        
-    DDD:::::DDDDD:::::D  o:::::ooooo:::::o h:::::h     h:::::h        
-    D:::::::::::::::DD   o:::::::::::::::o h:::::h     h:::::h ...... 
-    D::::::::::::DDD      oo:::::::::::oo  h:::::h     h:::::h .::::. 
+    DDDDDDDDDDDDD                         hhhhhhh
+    D::::::::::::DDD                      h:::::h
+    D:::::::::::::::DD                    h:::::h
+    DDD:::::DDDDD:::::D                   h:::::h
+      D:::::D    D:::::D    ooooooooooo    h::::h hhhhh
+      D:::::D     D:::::D oo:::::::::::oo  h::::hh:::::hhh
+      D:::::D     D:::::Do:::::::::::::::o h::::::::::::::hh
+      D:::::D     D:::::Do:::::ooooo:::::o h:::::::hhh::::::h
+      D:::::D     D:::::Do::::o     o::::o h::::::h   h::::::h
+      D:::::D     D:::::Do::::o     o::::o h:::::h     h:::::h
+      D:::::D     D:::::Do::::o     o::::o h:::::h     h:::::h
+      D:::::D    D:::::D o::::o     o::::o h:::::h     h:::::h
+    DDD:::::DDDDD:::::D  o:::::ooooo:::::o h:::::h     h:::::h
+    D:::::::::::::::DD   o:::::::::::::::o h:::::h     h:::::h ......
+    D::::::::::::DDD      oo:::::::::::oo  h:::::h     h:::::h .::::.
     DDDDDDDDDDDDD           ooooooooooo    hhhhhhh     hhhhhhh ......
   END
 end

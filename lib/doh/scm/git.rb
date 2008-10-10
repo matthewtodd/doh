@@ -9,7 +9,7 @@ class Doh::Scm::Git < Doh::Scm::Base
     else
       /(Untracked files:)|(Changed but not updated:)/
     end
-    
+
     warn = false
     `git status`.grep(/^#/).select do |line|
       warn = true if line =~ pattern
