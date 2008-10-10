@@ -21,7 +21,7 @@ Doh stops your git or svn commit with a warning if you've forgotten to add some 
 
 == INSTALL
 
- $ gem install doh --source http://gems.matthewtodd.org
+ $ gem install matthewtodd-doh --source http://gems.github.com
 
 == CONFIG
 
